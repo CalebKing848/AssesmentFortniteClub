@@ -3,8 +3,9 @@
     "",
     "\\FortniteEmpire",
     "\\FortniteEmpire\\FortniteEmpire",
+    "\\FortniteEmpire\\FortniteEmpire\\Models",
     "\\FortniteEmpire\\FortniteEmpire\\Views"
   ],
-  "SelectedNode": "\\FortniteEmpire\\FortniteEmpire.sln",
+  "SelectedNode": "\\FortniteEmpire\\FortniteEmpire\\Models\\NewsPost.cs",
   "PreviewInSolutionExplorer": false
 }

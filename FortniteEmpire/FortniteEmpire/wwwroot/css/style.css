@@ -295,3 +295,7 @@ footer {
 h1 {
     margin: 0px !important;
 }
+
+.nav-white {
+    color: #fff;
+}

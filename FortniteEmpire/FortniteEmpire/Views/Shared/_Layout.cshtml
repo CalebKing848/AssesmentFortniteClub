@@ -18,7 +18,7 @@
             </div>
             <ul class="nav navbar-nav">
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li><a href="@Url.Action("Index", "News")" title="read our blog">Read our blog</a></li>
+                <li><a href="@Url.Action("Index", "News")" title="read our news">Read our News</a></li>
                 <li><a href="#">Upcoming Competitions</a></li>
                 <li>@Html.ActionLink("Contact us", "Index", "Contact")</li>
             </ul>
@@ -26,16 +26,18 @@
                 <li>
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <form id="logout" action="@Url.Action("Logout", "Account")" method="POST">
-                            <a href="javascript: $('#logout').submit()" class="last">
-                                Logout
-                                <br /><span class="tagline">@User.Identity.Name</span>
-                            </a>
-                        </form>
+                    <form id="logout" action="@Url.Action("Logout", "Account")" method="POST">
+
+                        <br /><span class="nav-white">@User.Identity.Name</span>
+
+                        <a class="nav-white" href="javascript: $('#logout').submit()">
+                            Logout
+                        </a>
+                    </form>
                     }
                     else
                     {
-                        <a href="@Url.Action("Login", "Account")" title="log in" class="last">
+                        <a href="@Url.Action("Login", "Account")" title="log in">
                             Login
                         </a>
                     }

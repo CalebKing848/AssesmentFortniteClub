@@ -162,6 +162,8 @@ function clickOutside(event) {
 
     if (event.target === modal) {
         modal.classList.add("display-none");
+
+
     }
 }
 

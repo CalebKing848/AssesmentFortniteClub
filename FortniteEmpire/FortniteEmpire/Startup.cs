@@ -33,6 +33,16 @@ namespace FortniteEmpire
                 options.UseSqlServer(connectionString);
             });
 
+            services.AddDbContext<IdentityDataContext>(options =>
+            {
+                var connectionString = configuration.GetConnectionString("IdentityDataContext");
+                options.UseSqlServer(connectionString);
+            });
+
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+            .AddEntityFrameworkStores<IdentityDataContext>();
+
             services.AddMvc();
         }
 
