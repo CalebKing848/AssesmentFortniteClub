@@ -291,3 +291,7 @@ footer {
 .news-container {
     background-color: #fff;
 }
+
+h1 {
+    margin: 0px !important;
+}
