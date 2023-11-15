@@ -6,8 +6,6 @@ using FortniteEmpire.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace FortniteClubApp.Controllers
 {
     [Route("blog")]
@@ -54,14 +52,14 @@ namespace FortniteClubApp.Controllers
             return View(post);
         }
 
-
+        [Authorize]
         [HttpGet, Route("create")]
         public IActionResult Create()
         {
             return View();
         }
 
-
+        [Authorize]
         [HttpPost, Route("create")]
         public IActionResult Create(NewsPost post)
         {
