@@ -8,7 +8,7 @@ namespace FortniteEmpire.Models
 {
     public class NewsDataContext : DbContext
     {
-        public DbSet<NewsPost> Posts { get; set; }
+        public DbSet<NewsPost> NewsPosts { get; set; }
 
         public NewsDataContext(DbContextOptions<NewsDataContext> options)
             : base(options)

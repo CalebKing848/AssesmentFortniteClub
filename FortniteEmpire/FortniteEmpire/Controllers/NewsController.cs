@@ -22,7 +22,7 @@ namespace FortniteClubApp.Controllers
         public IActionResult Index(int page = 0)
         {
             var pageSize = 3;
-            var totalPosts = _db.Posts.Count();
+            var totalPosts = _db.NewsPosts.Count();
             var totalPages = totalPosts / pageSize;
             var previousPage = page - 1;
             var nextPage = page + 1;
@@ -33,7 +33,7 @@ namespace FortniteClubApp.Controllers
             ViewBag.HasNextPage = nextPage < totalPages;
 
             var posts =
-                _db.Posts
+                _db.NewsPosts
                     .OrderByDescending(x => x.Posted)
                     .Skip(pageSize * page)
                     .Take(pageSize)
@@ -48,7 +48,7 @@ namespace FortniteClubApp.Controllers
         [Route("{year:min(2000)}/{month:range(1,12)}/{key}")]
         public IActionResult Post(int year, int month, string key)
         {
-            var post = _db.Posts.FirstOrDefault(x => x.Key == key);
+            var post = _db.NewsPosts.FirstOrDefault(x => x.Key == key);
             return View(post);
         }
 
@@ -69,7 +69,7 @@ namespace FortniteClubApp.Controllers
             post.Author = User.Identity.Name;
             post.Posted = DateTime.Now;
 
-            _db.Posts.Add(post);
+            _db.NewsPosts.Add(post);
             _db.SaveChanges();
 
             return RedirectToAction("Post", "News", new

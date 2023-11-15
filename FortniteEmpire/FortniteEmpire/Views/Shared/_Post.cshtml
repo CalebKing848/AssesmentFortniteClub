@@ -1,4 +1,5 @@
 ﻿@model FortniteEmpire.Models.NewsPost
+@inject FortniteEmpire.Models.FormattingService Format
 
 <article class="blog-post">
     <h1>
@@ -7,7 +8,7 @@
         )
     </h1>
     <div class="details">
-        Posted <span>@Model.Posted</span> by <span>@Model.Author</span>
+        Posted <span>@Format.AsReadableDate(Model.Posted)</span> by <span>@Model.Author</span>
     </div>
     <div class="content">
         @Model.Body

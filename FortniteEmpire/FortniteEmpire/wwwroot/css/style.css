@@ -23,6 +23,10 @@ body {
     color: #fff !important;
 }
 
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #ebebeb !important;
+}
+
 .navbar-inverse .navbar-brand {
     color: #fff !important;
 }
@@ -104,7 +108,7 @@ footer {
 
 .header-title {
     color: #fff;
-    margin-left: 15px;
+    margin-left: 30px !important;
     padding: 10px 25px;
     background-color: #be0000;
 }
@@ -298,4 +302,30 @@ h1 {
 
 .nav-white {
     color: #fff;
+}
+
+.logout {
+    padding-left: 10px;
+}
+
+    .logout:hover {
+        text-decoration: none;
+        color: #ebebeb;
+    }
+
+
+/* Responsive Layout */
+
+@media screen and (max-width: 1400px) {
+    body {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    body {
+        padding: 0px;
+    }
 }

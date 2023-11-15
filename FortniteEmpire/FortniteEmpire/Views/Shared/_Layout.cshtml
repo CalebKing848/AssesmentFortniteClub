@@ -14,13 +14,13 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Fortnite Empire</a>
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")">Fortnite Empire</a>
             </div>
             <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
                 <li><a href="@Url.Action("Index", "News")" title="read our news">Read our News</a></li>
                 <li><a href="#">Upcoming Competitions</a></li>
-                <li>@Html.ActionLink("Contact us", "Index", "Contact")</li>
+                <li><a href="@Url.Action("Index", "Contact")">Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -30,7 +30,7 @@
 
                         <br /><span class="nav-white">@User.Identity.Name</span>
 
-                        <a class="nav-white" href="javascript: $('#logout').submit()">
+                        <a class="nav-white logout" href="javascript: $('#logout').submit()">
                             Logout
                         </a>
                     </form>
