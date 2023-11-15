@@ -1,4 +1,35 @@
-﻿@{
+﻿@model IEnumerable<FortniteEmpire.Models.NewsPost>
+@{
     Layout = "_Layout";
 }
 
+
+
+    <h1>News </h1>
+
+    <div class="news-container">
+
+        <p>
+            @if (ViewBag.HasPreviousPage)
+            {
+                <a href="@Url.Action("Index", "News" , new { page = ViewBag.PreviousPage })">
+                    &lt; Previous
+                </a>
+            }
+
+            @if (ViewBag.HasNextPage)
+            {
+                <a href="@Url.Action("Index", "News" , new { page = ViewBag.NextPage })">
+                    Next &gt;
+                </a>
+            }
+        </p>
+
+        <div>
+            @foreach (var post in Model)
+            {
+                @await Html.PartialAsync("_Post", post)
+            }
+        </div>
+
+    </div>

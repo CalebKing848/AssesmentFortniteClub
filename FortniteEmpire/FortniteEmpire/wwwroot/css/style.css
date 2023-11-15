@@ -287,3 +287,7 @@ footer {
     display: flex;
     justify-content: center;
 }
+
+.news-container {
+    background-color: #fff;
+}

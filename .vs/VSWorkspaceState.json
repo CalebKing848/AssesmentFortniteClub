@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FortniteEmpire",
+    "\\FortniteEmpire\\FortniteEmpire",
+    "\\FortniteEmpire\\FortniteEmpire\\Views"
   ],
+  "SelectedNode": "\\FortniteEmpire\\FortniteEmpire.sln",
   "PreviewInSolutionExplorer": false
 }
