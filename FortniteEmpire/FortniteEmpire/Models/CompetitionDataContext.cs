@@ -8,5 +8,12 @@ namespace FortniteEmpire.Models
 {
     public class CompetitionDataContext : DbContext
     {
+        public DbSet<CompetitionPost> CompetitionPost { get; set; }
+
+        public CompetitionDataContext(DbContextOptions<CompetitionDataContext> options)
+            : base(options)
+        {
+            Database.EnsureCreated();
+        }
     }
 }

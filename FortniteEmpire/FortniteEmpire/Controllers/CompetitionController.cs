@@ -1,19 +1,19 @@
-﻿using System;
+﻿using FortniteEmpire.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FortniteEmpire.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 
-namespace FortniteClubApp.Controllers
+namespace FortniteEmpire.Controllers
 {
-    [Route("news")]
-    public class NewsController : Controller
+    [Route("competition")]
+    public class CompetitionController : Controller
     {
-        private readonly NewsDataContext _db;
+        private readonly CompetitionDataContext _db;
 
-        public NewsController(NewsDataContext db)
+        public CompetitionController(CompetitionDataContext db)
         {
             _db = db;
         }
@@ -22,7 +22,7 @@ namespace FortniteClubApp.Controllers
         public IActionResult Index(int page = 0)
         {
             var pageSize = 3;
-            var totalPosts = _db.NewsPosts.Count();
+            var totalPosts = _db.CompetitionPost.Count();
             var totalPages = totalPosts / pageSize;
             var previousPage = page - 1;
             var nextPage = page + 1;
@@ -33,7 +33,7 @@ namespace FortniteClubApp.Controllers
             ViewBag.HasNextPage = nextPage < totalPages;
 
             var posts =
-                _db.NewsPosts
+                _db.CompetitionPost
                     .OrderByDescending(x => x.Posted)
                     .Skip(pageSize * page)
                     .Take(pageSize)
@@ -48,7 +48,7 @@ namespace FortniteClubApp.Controllers
         [Route("{year:min(2000)}/{month:range(1,12)}/{key}")]
         public IActionResult Post(int year, int month, string key)
         {
-            var post = _db.NewsPosts.FirstOrDefault(x => x.Key == key);
+            var post = _db.CompetitionPost.FirstOrDefault(x => x.Key == key);
             return View(post);
         }
 
@@ -61,7 +61,7 @@ namespace FortniteClubApp.Controllers
 
         [Authorize]
         [HttpPost, Route("create")]
-        public IActionResult Create(NewsPost post)
+        public IActionResult Create(CompetitionPost post)
         {
             if (!ModelState.IsValid)
                 return View();
@@ -69,7 +69,7 @@ namespace FortniteClubApp.Controllers
             post.Author = User.Identity.Name;
             post.Posted = DateTime.Now;
 
-            _db.NewsPosts.Add(post);
+            _db.CompetitionPost.Add(post);
             _db.SaveChanges();
 
             return RedirectToAction("Post", "News", new
@@ -79,5 +79,6 @@ namespace FortniteClubApp.Controllers
                 key = post.Key
             });
         }
+
     }
 }

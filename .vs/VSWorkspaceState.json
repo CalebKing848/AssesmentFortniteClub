@@ -3,9 +3,11 @@
     "",
     "\\FortniteEmpire",
     "\\FortniteEmpire\\FortniteEmpire",
+    "\\FortniteEmpire\\FortniteEmpire\\Controllers",
     "\\FortniteEmpire\\FortniteEmpire\\Models",
-    "\\FortniteEmpire\\FortniteEmpire\\Views"
+    "\\FortniteEmpire\\FortniteEmpire\\Views",
+    "\\FortniteEmpire\\FortniteEmpire\\Views\\Shared"
   ],
-  "SelectedNode": "\\FortniteEmpire\\FortniteEmpire\\Startup.cs",
+  "SelectedNode": "\\FortniteEmpire\\FortniteEmpire\\Models\\CompetitionDataContext.cs",
   "PreviewInSolutionExplorer": false
 }
