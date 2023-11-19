@@ -34,6 +34,7 @@ namespace FortniteEmpire.Controllers
 
             var posts =
                 _db.CompetitionPost
+                     //.Where(x => x.EndDate >= currentDate) 
                     .OrderByDescending(x => x.Posted)
                     .Skip(pageSize * page)
                     .Take(pageSize)

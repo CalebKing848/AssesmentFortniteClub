@@ -4,27 +4,35 @@
 }
 
 <div class="news-container">
-    <h1>Fortnite Empire News</h1>
-    <p>
-        @if (ViewBag.HasPreviousPage)
-        {
-            <a href="@Url.Action("Index", "News" , new { page = ViewBag.PreviousPage })">
-                &lt; Previous
-            </a>
-        }
+    
+    <div class="top-content">
+        <h1>Fortnite Empire News</h1>
+        <a class="create-btn" href="@Url.Action("Create", "News")">Create</a>
+    </div>
 
-        @if (ViewBag.HasNextPage)
-        {
-            <a href="@Url.Action("Index", "News" , new { page = ViewBag.NextPage })">
-                Next &gt;
-            </a>
-        }
-    </p>
+    @if (Model.Any())
+    {
+        <p>
+            @if (ViewBag.HasPreviousPage)
+            {
+                <a href="@Url.Action("Index", "News", new { page = ViewBag.PreviousPage })">
+                    &lt; Previous
+                </a>
+            }
+
+            @if (ViewBag.HasNextPage)
+            {
+                <a href="@Url.Action("Index", "News", new { page = ViewBag.NextPage })">
+                    Next &gt;
+                </a>
+            }
+        </p>
+    }
 
     <div>
         @foreach (var post in Model)
         {
-            @await Html.PartialAsync("_Post", post)
+            @await Html.PartialAsync("_NewsPost", post)
         }
     </div>
 

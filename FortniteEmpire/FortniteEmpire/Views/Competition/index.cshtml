@@ -4,7 +4,11 @@
 }
 
 <div class="news-container">
-    <h1>Fortnite Empire Competition</h1>
+    <div class="top-content">
+        <h1>Fortnite Empire News</h1>
+        <a class="create-btn" href="@Url.Action("Create", "Competition")">Create</a>
+    </div>
+
     <p>
         @if (ViewBag.HasPreviousPage)
         {

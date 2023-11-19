@@ -6,8 +6,9 @@
     "\\FortniteEmpire\\FortniteEmpire\\Controllers",
     "\\FortniteEmpire\\FortniteEmpire\\Models",
     "\\FortniteEmpire\\FortniteEmpire\\Views",
+    "\\FortniteEmpire\\FortniteEmpire\\Views\\Competition",
     "\\FortniteEmpire\\FortniteEmpire\\Views\\Shared"
   ],
-  "SelectedNode": "\\FortniteEmpire\\FortniteEmpire\\Models\\CompetitionDataContext.cs",
+  "SelectedNode": "\\FortniteEmpire\\FortniteEmpire\\Views\\Competition\\Create.cshtml",
   "PreviewInSolutionExplorer": false
 }

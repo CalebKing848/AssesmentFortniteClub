@@ -313,9 +313,27 @@ h1 {
         color: #ebebeb;
     }
 
+.create-btn {
+    background-color: #07d439;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.create-btn:hover {
+     background-color: #04c934;
+     text-decoration: none;
+     color: #fff;
+}
+
+.top-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 12px;
+}
 
 /* Responsive Layout */
-
 @media screen and (max-width: 1400px) {
     body {
         padding-left: 100px;
