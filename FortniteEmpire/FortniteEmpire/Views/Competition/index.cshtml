@@ -8,7 +8,7 @@
         <h1 class="title-of-page">Recent Fortnite Empire Competition Posts</h1>
         <a class="create-btn" href="@Url.Action("Create", "Competition")">Create</a>
     </div>
-
+    <hr />
     <div class="arrows">
         @if (ViewBag.HasPreviousPage)
         {
@@ -23,13 +23,13 @@
                 Next &gt;
             </a>
         }
-      </div>
-
-        <div>
-            @foreach (var post in Model)
-            {
-                @await Html.PartialAsync("_CompetitionPost", post)
-            }
-        </div>
-
     </div>
+
+    <div>
+        @foreach (var post in Model)
+        {
+            @await Html.PartialAsync("_CompetitionPost", post)
+        }
+    </div>
+
+</div>

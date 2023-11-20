@@ -3,10 +3,10 @@
 @{
     Layout = "_Layout";
 }
-<div class="main-container">
-    <h1 class="title-of-page">Create Competition Post</h1>
+<div class="f-main-container">
 
     <fieldset>
+        <h1 class="lr-heading">Create Competition Post</h1>
 
         <form asp-action="Create" asp-controller="Competition">
 
@@ -32,13 +32,13 @@
 
             <div class="form-item">
                 <label asp-for="Body"></label>
-                <textarea asp-for="Body" class="form-control body-input" placeholder="Competition post content"></textarea>
+                <textarea asp-for="Body" class="form-control body-text" placeholder="Competition post content"></textarea>
                 <span asp-validation-for="Body"></span>
             </div>
 
-            <p>
+            <div class="center-content">
                 <button class="submit-btn" type="submit">Create Post</button>
-            </p>
+            </div>
 
         </form>
 

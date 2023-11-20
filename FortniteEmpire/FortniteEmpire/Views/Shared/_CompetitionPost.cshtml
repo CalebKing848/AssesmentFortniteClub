@@ -10,8 +10,7 @@
 
 
     <div class="details">
-        Posted <span>@Format.AsReadableDate(Model.Date)</span> by <span>@Model.Author</span>
-        <p>@Model.Location</p>
+        <b>Date: <span>@Format.AsReadableDate(Model.Date),</span> Location: <span></span>@Model.Location<span> By: @Model.Author</span></b>
     </div>
     <div class="content">
         @Model.Body

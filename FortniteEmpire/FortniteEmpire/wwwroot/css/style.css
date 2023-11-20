@@ -310,21 +310,20 @@ h1 {
     }
 
 .create-btn {
-    background-color: #05b530;
-    padding: 7px 20px;
-    font-size: 16px;
+    background-color: #be0000;
+    padding: 9px 20px;
+    font-size: 15px;
     color: #fff;
-    border: 2px solid #03c432;
     text-decoration: none;
     border-radius: 2px;
     font-weight: bold;
 }
 
     .create-btn:hover {
-        background-color: #049d29;
-        text-decoration: none;
+        background-color: #9d0303;
         color: #fff;
         transition: .2s ease-in-out;
+        text-decoration: none;
     }
 
 .create-btn:focus {
@@ -339,11 +338,11 @@ h1 {
 }
 
 .title-of-page {
-    color: #1b2a99;
+    color: #be0000;
 }
 
 .main-container {
-    padding: 15px 30px;
+    padding: 15px 50px;
     background-color: #fff;
 }
 
@@ -365,20 +364,11 @@ h1 {
 }
 
 .arrows {
-    padding: 8px 0px;
     display: flow-root;
 }
 
 .next {
     float: right;
-}
-
-.text-input {
-   width: 40%;
-}
-
-.body-input {
-    width: 60%;
 }
 
 .form-item {
@@ -397,6 +387,39 @@ h1 {
         background-color: #049d29;
         transition: .2s ease-in-out;
     }
+
+.lr-heading {
+    color: #be0000;
+}
+
+
+.f-main-container {
+    background-color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-user {
+    background-color: #be0000;
+    color: #fff;
+    padding: 8px 10px;
+    font-weight: bold;
+}
+
+.btn-user:hover {
+    background-color: #9d0303;
+    color: #fff;
+    transition: .2s ease-in-out;
+}
+
+.body-text {
+    height: 150px !important;
+}
+
+.main-article {
+    padding: 10px;
+}
 
 /* Responsive Layout */
 @media screen and (max-width: 1400px) {

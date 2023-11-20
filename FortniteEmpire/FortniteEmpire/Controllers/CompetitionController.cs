@@ -21,9 +21,9 @@ namespace FortniteEmpire.Controllers
         [Route("")]
         public IActionResult Index(int page = 0)
         {
-            var pageSize = 1;
+            var pageSize = 3;
             var totalPosts = _db.CompetitionPost.Count();
-            var totalPages = totalPosts / pageSize;
+            var totalPages = (int)Math.Ceiling((double)totalPosts / pageSize);
             var previousPage = page - 1;
             var nextPage = page + 1;
 
@@ -68,7 +68,6 @@ namespace FortniteEmpire.Controllers
                 return View();
 
             post.Author = User.Identity.Name;
-            //post.Posted = DateTime.Now;
 
             _db.CompetitionPost.Add(post);
             _db.SaveChanges();

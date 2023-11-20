@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Fortnite Pro Clucbs</title>
+    <title>Fortnite Empire</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="/css/style.css" rel="stylesheet" type="text/css"> <!--Link to CSS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -23,27 +23,26 @@
                 <li><a href="@Url.Action("Index", "Contact")">Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li>
+
                     @if (User.Identity.IsAuthenticated)
                     {
-                    <form id="logout" action="@Url.Action("Logout", "Account")" method="POST">
+                        <li>
+                            <form id="logout" action="@Url.Action("Logout", "Account")" method="POST">
 
-                        <br /><span class="nav-white">@User.Identity.Name</span>
+                                <br /><span class="nav-white">@User.Identity.Name</span>
 
-                        <a class="nav-white logout" href="javascript: $('#logout').submit()">
-                            Logout
-                        </a>
-                    </form>
-                    }
-                    else
-                    {
-                        <a href="@Url.Action("Login", "Account")" title="log in">
-                            Login
-                        </a>
-                    }
-
-                </li>
-            </ul>
+                                <a class="nav-white logout" href="javascript: $('#logout').submit()">
+                                    Logout
+                                </a>
+                            </form>
+                        </li>
+                     }
+                     else
+                     {
+                        <li><a href="@Url.Action("Register", "Account")" title="log in">Register</a></li>
+                        <li><a href="@Url.Action("Login", "Account")" title="log in">Login</a></li>
+                     }
+             </ul>
         </div>
     </nav>
 

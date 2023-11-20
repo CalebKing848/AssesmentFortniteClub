@@ -3,12 +3,14 @@
     "",
     "\\FortniteEmpire",
     "\\FortniteEmpire\\FortniteEmpire",
-    "\\FortniteEmpire\\FortniteEmpire\\Controllers",
     "\\FortniteEmpire\\FortniteEmpire\\Models",
     "\\FortniteEmpire\\FortniteEmpire\\Views",
     "\\FortniteEmpire\\FortniteEmpire\\Views\\Competition",
-    "\\FortniteEmpire\\FortniteEmpire\\Views\\Shared"
+    "\\FortniteEmpire\\FortniteEmpire\\Views\\News",
+    "\\FortniteEmpire\\FortniteEmpire\\Views\\Shared",
+    "\\FortniteEmpire\\FortniteEmpire\\wwwroot",
+    "\\FortniteEmpire\\FortniteEmpire\\wwwroot\\css"
   ],
-  "SelectedNode": "\\FortniteEmpire\\FortniteEmpire\\Models\\CompetitionPost.cs",
+  "SelectedNode": "\\FortniteEmpire\\FortniteEmpire\\Views\\News\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
