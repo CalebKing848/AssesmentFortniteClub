@@ -42,7 +42,7 @@ namespace FortniteEmpire.Models
         [DataType(DataType.Text)]
         [StringLength(100, MinimumLength = 5,
            ErrorMessage = "Location must be between 5 and 100 characters long")]
-        public string location { get; set; }
+        public string Location { get; set; }
 
         [Required]
         [MinLength(100, ErrorMessage = "Blog posts must be at least 100 characters long")]
@@ -51,6 +51,6 @@ namespace FortniteEmpire.Models
 
          public string Author { get; set; }
 
-        public DateTime Posted { get; set; }
+        //public DateTime Posted { get; set; }
     }
 }

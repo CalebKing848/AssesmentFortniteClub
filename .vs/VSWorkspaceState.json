@@ -9,6 +9,6 @@
     "\\FortniteEmpire\\FortniteEmpire\\Views\\Competition",
     "\\FortniteEmpire\\FortniteEmpire\\Views\\Shared"
   ],
-  "SelectedNode": "\\FortniteEmpire\\FortniteEmpire\\Views\\Competition\\Create.cshtml",
+  "SelectedNode": "\\FortniteEmpire\\FortniteEmpire\\Models\\CompetitionPost.cs",
   "PreviewInSolutionExplorer": false
 }

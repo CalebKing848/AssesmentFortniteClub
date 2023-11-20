@@ -3,33 +3,33 @@
     Layout = "_Layout";
 }
 
-<div class="news-container">
+<div class="main-container">
     <div class="top-content">
-        <h1>Fortnite Empire News</h1>
+        <h1>Fortnite Empire Competition</h1>
         <a class="create-btn" href="@Url.Action("Create", "Competition")">Create</a>
     </div>
 
-    <p>
+    <div class="arrows">
         @if (ViewBag.HasPreviousPage)
         {
-            <a href="@Url.Action("Index", "News" , new { page = ViewBag.PreviousPage })">
+            <a href="@Url.Action("Index", "Competition" , new { page = ViewBag.PreviousPage })">
                 &lt; Previous
             </a>
         }
 
         @if (ViewBag.HasNextPage)
         {
-            <a href="@Url.Action("Index", "News" , new { page = ViewBag.NextPage })">
+            <a class="next" href="@Url.Action("Index", "Competition" , new { page = ViewBag.NextPage })">
                 Next &gt;
             </a>
         }
-    </p>
+      </div>
 
-    <div>
-        @foreach (var post in Model)
-        {
-            @await Html.PartialAsync("_Post", post)
-        }
+        <div>
+            @foreach (var post in Model)
+            {
+                @await Html.PartialAsync("_CompetitionPost", post)
+            }
+        </div>
+
     </div>
-
-</div>

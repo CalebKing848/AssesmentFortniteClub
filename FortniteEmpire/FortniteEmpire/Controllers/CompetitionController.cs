@@ -21,7 +21,7 @@ namespace FortniteEmpire.Controllers
         [Route("")]
         public IActionResult Index(int page = 0)
         {
-            var pageSize = 3;
+            var pageSize = 1;
             var totalPosts = _db.CompetitionPost.Count();
             var totalPages = totalPosts / pageSize;
             var previousPage = page - 1;
@@ -34,8 +34,8 @@ namespace FortniteEmpire.Controllers
 
             var posts =
                 _db.CompetitionPost
-                     //.Where(x => x.EndDate >= currentDate) 
-                    .OrderByDescending(x => x.Posted)
+                    .Where(x => x.Date >= DateTime.Now) // for date
+                    .OrderByDescending(x => x.Date)
                     .Skip(pageSize * page)
                     .Take(pageSize)
                     .ToArray();
@@ -68,15 +68,15 @@ namespace FortniteEmpire.Controllers
                 return View();
 
             post.Author = User.Identity.Name;
-            post.Posted = DateTime.Now;
+            //post.Posted = DateTime.Now;
 
             _db.CompetitionPost.Add(post);
             _db.SaveChanges();
 
-            return RedirectToAction("Post", "News", new
+            return RedirectToAction("Post", "Competition", new
             {
-                year = post.Posted.Year,
-                month = post.Posted.Month,
+                year = post.Date.Year,
+                month = post.Date.Month,
                 key = post.Key
             });
         }

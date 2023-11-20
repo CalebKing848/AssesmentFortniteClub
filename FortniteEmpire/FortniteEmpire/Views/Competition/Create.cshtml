@@ -3,31 +3,44 @@
 @{
     Layout = "_Layout";
 }
+<div class="main-container">
+    <h1>Create Blog Post</h1>
 
-<h1>Create Blog Post</h1>
+    <fieldset>
 
-<fieldset>
+        <form asp-action="Create" asp-controller="Competition">
 
-    <form asp-action="Create" asp-controller="Competition">
+            <div asp-validation-summary="ModelOnly" class="input-validation-error"></div>
 
-        <div asp-validation-summary="ModelOnly" class="input-validation-error"></div>
+            <p>
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" placeholder="Competition Name" />
+                <span asp-validation-for="Name"></span>
+            </p>
 
-        <p>
-            <label asp-for="Name"></label>
-            <input asp-for="Name" class="form-control" placeholder="Competition Name" />
-            <span asp-validation-for="Name"></span>
-        </p>
+            <p>
+                <label asp-for="Location"></label>
+                <input asp-for="Location" class="form-control" placeholder="Competition Location" />
+                <span asp-validation-for="Location"></span>
+            </p>
 
-        <p>
-            <label asp-for="Body"></label>
-            <textarea asp-for="Body" class="form-control" placeholder="Blog post content"></textarea>
-            <span asp-validation-for="Body"></span>
-        </p>
+            <p>
+                <label asp-for="Date"></label>
+                <input asp-for="Date" class="form-control" placeholder="Competition Location" />
+                <span asp-validation-for="Date"></span>
+            </p>
 
-        <p>
-            <button type="submit">Create Post</button>
-        </p>
+            <p>
+                <label asp-for="Body"></label>
+                <textarea asp-for="Body" class="form-control" placeholder="News post content"></textarea>
+                <span asp-validation-for="Body"></span>
+            </p>
 
-    </form>
+            <p>
+                <button type="submit">Create Post</button>
+            </p>
 
-</fieldset>
+        </form>
+
+    </fieldset>
+</div>

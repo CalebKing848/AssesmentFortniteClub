@@ -3,32 +3,28 @@
     Layout = "_Layout";
 }
 
-<div class="news-container">
+<div class="main-container">
     
     <div class="top-content">
-        <h1>Fortnite Empire News</h1>
+        <h1>Recent News Post</h1>
         <a class="create-btn" href="@Url.Action("Create", "News")">Create</a>
     </div>
+    <div class="arrows">
+        @if (ViewBag.HasPreviousPage)
+        {
+            <a href="@Url.Action("Index", "News", new { page = ViewBag.PreviousPage })">
+                &lt; Previous
+            </a>
+        }
 
-    @if (Model.Any())
-    {
-        <p>
-            @if (ViewBag.HasPreviousPage)
-            {
-                <a href="@Url.Action("Index", "News", new { page = ViewBag.PreviousPage })">
-                    &lt; Previous
-                </a>
-            }
-
-            @if (ViewBag.HasNextPage)
-            {
-                <a href="@Url.Action("Index", "News", new { page = ViewBag.NextPage })">
-                    Next &gt;
-                </a>
-            }
-        </p>
-    }
-
+        @if (ViewBag.HasNextPage)
+        {
+            <a class="next" href="@Url.Action("Index", "News", new { page = ViewBag.NextPage })">
+                Next &gt;
+            </a>
+        }
+    </div>
+  
     <div>
         @foreach (var post in Model)
         {

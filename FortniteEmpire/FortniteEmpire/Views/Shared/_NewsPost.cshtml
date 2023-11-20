@@ -1,14 +1,14 @@
 ﻿@model FortniteEmpire.Models.NewsPost
 @inject FortniteEmpire.Models.FormattingService Format
 
-<article class="blog-post">
-    <h1>
+<article class="main-article">
+    <h1 class="main-heading">
         @Html.ActionLink(Model.Title, "Post", "News",
             new { year = Model.Posted.Year, month = Model.Posted.Month, key = Model.Key }
         )
     </h1>
     <div class="details">
-        Posted <span>@Format.AsReadableDate(Model.Posted)</span> by <span>@Model.Author</span>
+        <b> Posted <span>@Format.AsReadableDate(Model.Posted)</span> by <span>@Model.Author</span></b>
     </div>
     <div class="content">
         @Model.Body

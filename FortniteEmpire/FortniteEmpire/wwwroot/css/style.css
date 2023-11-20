@@ -292,10 +292,6 @@ footer {
     justify-content: center;
 }
 
-.news-container {
-    background-color: #fff;
-}
-
 h1 {
     margin: 0px !important;
 }
@@ -314,24 +310,65 @@ h1 {
     }
 
 .create-btn {
-    background-color: #07d439;
-    padding: 10px 15px;
+    background-color: #05b530;
+    padding: 7px 20px;
     font-size: 16px;
     color: #fff;
-    border-radius: 5px;
+    border: 2px solid #03c432;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: bold;
 }
 
-.create-btn:hover {
-     background-color: #04c934;
-     text-decoration: none;
-     color: #fff;
+    .create-btn:hover {
+        background-color: #049d29;
+        text-decoration: none;
+        color: #fff;
+        transition: .2s ease-in-out;
+    }
+
+.create-btn:focus {
+    text-decoration: none;
+    color: #fff;
 }
 
 .top-content {
     display: flex;
     justify-content: space-between;
-    padding: 5px 12px;
+    margin-bottom: 10px;
 }
+
+.main-container {
+    padding: 10px 30px;
+    background-color: #fff;
+}
+
+.main-heading {
+    margin-bottom: 8px !important;
+}
+
+.main-heading a {
+    color: #be0000  !important;
+}
+
+.details {
+    margin-bottom: 8px !important;
+}
+
+.main-article {
+    background-color: #fff;
+    padding-top: 15px;
+}
+
+.arrows {
+    padding: 6px 0px;
+    display: flow-root;
+}
+
+.next {
+    float: right;
+}
+
 
 /* Responsive Layout */
 @media screen and (max-width: 1400px) {
@@ -345,5 +382,9 @@ h1 {
 @media screen and (max-width: 1200px) {
     body {
         padding: 0px;
+    }
+
+    .header-title {
+        font-size: 30px;
     }
 }
