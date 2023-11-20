@@ -4,7 +4,7 @@
     Layout = "_Layout";
 }
 <div class="main-container">
-    <h1>Create News Post</h1>
+    <h1 class="title-of-page">Create News Post</h1>
 
     <fieldset>
 
@@ -12,23 +12,23 @@
 
             <div asp-validation-summary="ModelOnly" class="input-validation-error"></div>
 
-            <p>
+            <div class="form-item">
                 <label asp-for="Title"></label>
-                <input asp-for="Title" class="form-control" placeholder="Blog post title" />
+                <input asp-for="Title" class="form-control text-input" placeholder="Blog post title" />
                 <span asp-validation-for="Title"></span>
-            </p>
+            </div>
 
-            <p>
+            <div class="form-item">
                 <label asp-for="Body"></label>
-                <textarea asp-for="Body" class="form-control" placeholder="Blog post content"></textarea>
+                <textarea asp-for="Body" class="form-control body-input" placeholder="Blog post content"></textarea>
                 <span asp-validation-for="Body"></span>
-            </p>
+            </div>
 
-            <p>
-                <button type="submit">Create Post</button>
-            </p>
+                <p>
+                    <button class="submit-btn" type="submit">Create Post</button>
+                </p>
 
-        </form>
+</form>
 
     </fieldset>
 </div>

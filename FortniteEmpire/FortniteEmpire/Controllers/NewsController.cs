@@ -21,7 +21,7 @@ namespace FortniteClubApp.Controllers
         [Route("")]
         public IActionResult Index(int page = 0)
         {
-            var pageSize = 3;
+            var pageSize = 2;
             var totalPosts = _db.NewsPosts.Count();
             var totalPages = totalPosts / pageSize;
             var previousPage = page - 1;

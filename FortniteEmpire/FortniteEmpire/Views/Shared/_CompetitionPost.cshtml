@@ -1,7 +1,7 @@
 ﻿@model FortniteEmpire.Models.CompetitionPost
 @inject FortniteEmpire.Models.FormattingService Format
 
-<article class="blog-post">
+<article class="main-article">
     <h1 class="main-heading">
         @Html.ActionLink(Model.Name, "Post", "Competition",
             new { year = Model.Date.Year, month = Model.Date.Month, key = Model.Key }

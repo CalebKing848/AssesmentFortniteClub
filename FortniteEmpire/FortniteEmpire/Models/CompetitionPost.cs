@@ -35,6 +35,7 @@ namespace FortniteEmpire.Models
 
         [Display(Name = "Competition Date")]
         [Required]
+        [DataType(DataType.Date)]
         public DateTime Date { get; set; }
 
         [Display(Name = "Competition Location")]

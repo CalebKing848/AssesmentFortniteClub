@@ -335,11 +335,15 @@ h1 {
 .top-content {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+}
+
+.title-of-page {
+    color: #1b2a99;
 }
 
 .main-container {
-    padding: 10px 30px;
+    padding: 15px 30px;
     background-color: #fff;
 }
 
@@ -361,7 +365,7 @@ h1 {
 }
 
 .arrows {
-    padding: 6px 0px;
+    padding: 8px 0px;
     display: flow-root;
 }
 
@@ -369,6 +373,30 @@ h1 {
     float: right;
 }
 
+.text-input {
+   width: 40%;
+}
+
+.body-input {
+    width: 60%;
+}
+
+.form-item {
+    margin: 10px 0px;
+}
+
+.submit-btn {
+    margin-top: 5px;
+    padding: 8px 12px;
+    background-color: #05b530;
+    color: #fff;
+    border: 0px;
+}
+
+    .submit-btn:hover {
+        background-color: #049d29;
+        transition: .2s ease-in-out;
+    }
 
 /* Responsive Layout */
 @media screen and (max-width: 1400px) {
